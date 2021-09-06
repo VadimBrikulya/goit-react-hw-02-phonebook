@@ -10,16 +10,17 @@ class App extends Component {
   filter: '', 
   }
 
-  formSubmitHandler = data => {
-    console.log(data);
+  addContact = (data) => {
+    this.state.contacts()
   }
   
+
   render() {
     return (
      
         <div className={css.App}>
           <h1>Phonebook</h1>
-        <Form onSubmit={this.formSubmitHandler} />
+        <Form onSubmit={this.addContact} />
           <Contacts/>
         </div>
                      
