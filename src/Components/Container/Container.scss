@@ -1,5 +1,9 @@
 .Container {
+  display: flex;
+  flex-direction: column;
+  // outline: 1px solid teal;
   max-width: 1170px;
+  // padding-top: 100px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
+
 class Form extends Component {
     state = {
         name: '',
@@ -25,9 +26,9 @@ class Form extends Component {
     };
     render() {
         return (
-            <form onSubmit = {this.handleSbmit} >
+            <form onSubmit = {this.handleSbmit} className="Container">
           <label htmlFor={this.nameInputId}>            
-            Name <input
+            Name <br/><input
                     type="text"
                     value={this.state.name}
                     onChange={this.handleChange}
@@ -36,10 +37,12 @@ class Form extends Component {
                     title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
                         required
                         id={this.nameInputId}
-                />
+                    />
+                    
           </label>
+                    <br/>
                 <label htmlFor={this.numberInputId}>
-                    Number <input
+                    Number <br/><input
                             type="tel"
                             name="number"
                             value={this.state.number}
@@ -50,8 +53,9 @@ class Form extends Component {
                             id={this.numberInputId}
                           />
           </label>
-          
-          <button type="submit">add contact</button>
+          <div style ={{marginTop: "10px"}}>
+            <button type="submit">add contact</button>
+          </div>
         </form>
         );
     }

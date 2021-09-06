@@ -17,8 +17,12 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Form onSubmit={this.formSubmitHandler} />        
+        <div>
+          <h1>Phonebook</h1>
+          <Form onSubmit={this.formSubmitHandler} /> 
+        </div>       
       </Container>
+
     );
   }
 }
