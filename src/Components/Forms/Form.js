@@ -53,8 +53,8 @@ class Form extends Component {
                             id={this.numberInputId}
                           />
           </label>
-          <div style ={{marginTop: "10px"}}>
-                    <button type="submit" disabled= {!this.state.name || !this.state.number}>add contact</button>
+          <div style ={{marginTop: "10px"}} >
+                    <button className={css.btn} type="submit" disabled= {!this.state.name || !this.state.number}>add contact</button>
           </div>
         </form>
         );

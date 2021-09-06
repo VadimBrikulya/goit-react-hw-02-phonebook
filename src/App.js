@@ -1,9 +1,9 @@
-import Form from './Components/Forms/Form';
+
+import Contacts from 'Components/Contacts/Contacts';
 import React, { Component } from 'react';
 import css from "./App.module.css";
 
-
-
+import Form from './Components/Forms/Form';
 class App extends Component {
   state = {
   contacts: [],
@@ -19,8 +19,10 @@ class App extends Component {
      
         <div className={css.App}>
           <h1>Phonebook</h1>
-          <Form onSubmit={this.formSubmitHandler} /> 
-        </div>             
+        <Form onSubmit={this.formSubmitHandler} />
+          <Contacts/>
+        </div>
+                     
     );
   }
 }
