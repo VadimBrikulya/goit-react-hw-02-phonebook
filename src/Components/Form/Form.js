@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 class Form extends Component {
+
     render() {
         return (
-            <div>
-                <input type="tel" placeholder = "Name" />
-            </div>
+            <form>
+                <label>
+                    Name
+                    <input type="tel" placeholder = "Name" />
+                </label>
+            </form>
         );
     }
 }
