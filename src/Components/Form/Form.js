@@ -26,20 +26,20 @@ class Form extends Component {
     };
     render() {
         return (
-            <form onSubmit = {this.handleSbmit} className="Container">
-          <label htmlFor={this.nameInputId}>            
-            Name <br/><input
-                    type="text"
-                    value={this.state.name}
-                    onChange={this.handleChange}
-                    name="name"                     
-                    pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-                    title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
-                        required
-                        id={this.nameInputId}
-                    />
-                    
-          </label>
+            <form onSubmit = {this.handleSbmit} >
+                <label htmlFor={this.nameInputId} >            
+                    Name <br/><input
+                            type="text"
+                            value={this.state.name}
+                            onChange={this.handleChange}
+                            name="name"                     
+                            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                            title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
+                                required
+                                id={this.nameInputId}
+                            />
+                            
+                </label>
                     <br/>
                 <label htmlFor={this.numberInputId}>
                     Number <br/><input
@@ -54,7 +54,7 @@ class Form extends Component {
                           />
           </label>
           <div style ={{marginTop: "10px"}}>
-            <button type="submit">add contact</button>
+                    <button type="submit" style={{ color: "teal"}}>add contact</button>
           </div>
         </form>
         );
