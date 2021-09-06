@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
-import css from "./Forms.module.css";
+
 class Form extends Component {
     state = {
         name: '',
@@ -15,10 +15,8 @@ class Form extends Component {
         this.setState ({[name]: value})
     };
   
-        handleSubmit = e => {
-            e.preventDefault();
-            
-            
+        handleSbmit = e => {
+        e.preventDefault();
             this.props.onSubmit(this.state)
             this.reset();
     };
@@ -28,7 +26,7 @@ class Form extends Component {
     };
     render() {
         return (
-            <form onSubmit = {this.handleSubmit} className={css.Button__container}>
+            <form onSubmit = {this.handleSbmit} >
                 <label htmlFor={this.nameInputId} >            
                     Name <br/><input
                             type="text"
@@ -55,9 +53,8 @@ class Form extends Component {
                             id={this.numberInputId}
                           />
           </label>
-          <div style ={{marginTop: "10px"}} >
-                    <button className={css.btn} type="submit"
-                        disabled={!this.state.name || !this.state.number}>add contact</button>
+          <div style ={{marginTop: "10px"}}>
+                    <button type="submit" disabled= {!this.state.name || !this.state.number}>add contact</button>
           </div>
         </form>
         );
