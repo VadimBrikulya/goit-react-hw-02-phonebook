@@ -1,6 +1,6 @@
-import Form from './Components/Form/Form';
+import Form from './Components/Forms/Form';
 import React, { Component } from 'react';
-import './App.css';
+import css from "./App.module.css";
 
 
 
@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
      
-        <div>
+        <div className={css.App}>
           <h1>Phonebook</h1>
           <Form onSubmit={this.formSubmitHandler} /> 
         </div>             
