@@ -1,7 +1,7 @@
 import Form from './Components/Form/Form';
 import React, { Component } from 'react';
 import './App.css';
-import Container from './Components/Container/Container';
+
 
 
 class App extends Component {
@@ -16,13 +16,11 @@ class App extends Component {
   
   render() {
     return (
-      <Container>
+     
         <div>
           <h1>Phonebook</h1>
           <Form onSubmit={this.formSubmitHandler} /> 
-        </div>       
-      </Container>
-
+        </div>             
     );
   }
 }

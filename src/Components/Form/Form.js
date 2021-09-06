@@ -54,7 +54,7 @@ class Form extends Component {
                           />
           </label>
           <div style ={{marginTop: "10px"}}>
-                    <button type="submit" style={{ color: "teal"}}>add contact</button>
+                    <button type="submit" disabled= {!this.state.name || !this.state.number}>add contact</button>
           </div>
         </form>
         );
