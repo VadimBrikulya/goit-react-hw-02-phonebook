@@ -15,7 +15,7 @@ class Form extends Component {
         this.setState ({[name]: value})
     };
   
-        handleSbmit = e => {
+        handleSubmit = e => {
         e.preventDefault();
             this.props.onSubmit(this.state)
             this.reset();
@@ -26,7 +26,7 @@ class Form extends Component {
     };
     render() {
         return (
-            <form onSubmit = {this.handleSbmit} >
+            <form onSubmit = {this.handleSubmit} >
                 <label htmlFor={this.nameInputId} >            
                     Name <br/><input
                             type="text"
