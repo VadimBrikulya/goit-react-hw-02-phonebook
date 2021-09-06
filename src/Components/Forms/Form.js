@@ -15,8 +15,10 @@ class Form extends Component {
         this.setState ({[name]: value})
     };
   
-        handleSbmit = e => {
-        e.preventDefault();
+        handleSubmit = e => {
+            e.preventDefault();
+            
+            
             this.props.onSubmit(this.state)
             this.reset();
     };
@@ -26,7 +28,7 @@ class Form extends Component {
     };
     render() {
         return (
-            <form onSubmit = {this.handleSbmit} className={css.Button__container}>
+            <form onSubmit = {this.handleSubmit} className={css.Button__container}>
                 <label htmlFor={this.nameInputId} >            
                     Name <br/><input
                             type="text"
@@ -54,7 +56,8 @@ class Form extends Component {
                           />
           </label>
           <div style ={{marginTop: "10px"}} >
-                    <button className={css.btn} type="submit" disabled= {!this.state.name || !this.state.number}>add contact</button>
+                    <button className={css.btn} type="submit"
+                        disabled={!this.state.name || !this.state.number}>add contact</button>
           </div>
         </form>
         );

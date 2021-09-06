@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-
+import css from "./Contacts.module.css"
+import shortid from "shortid";
 class Contacts extends Component {
-state = {
-    contacts: [
-                    {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
-                    {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
-                    {id: 'id-3', name: 'Eden Clements', number: '645-17-79'},
-                    {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
-],
-  filter: '',
-  name: '',
-  number: ''
-}
+    inputFilterId = shortid.generate();
     render() {
         return (
             <div>
                 <h2>Contacts</h2>
                 <form>
                     
-                    <label>
-                        Find contacts by name<br/><input/>
+                    <label htmlFor={this.inputFilterId}>
+                        Find contacts by name
+                        <input
+                        className={css.input}
+                        onChange={this.props.onFilter}
+                        type="text"
+                        value={this.props.filter}
+                        id={this.inputFilterId}
+                        />
                     </label>
                     
                 </form>
