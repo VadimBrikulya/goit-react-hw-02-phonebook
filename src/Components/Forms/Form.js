@@ -17,7 +17,7 @@ class Form extends Component {
   
         clickOnSubmit = e => {
         e.preventDefault();
-            this.props.onSubmit(this.state.number)            
+            this.props.onSubmit(this.state);            
             this.reset();
     };
 
