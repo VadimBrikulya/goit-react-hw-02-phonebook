@@ -12,17 +12,20 @@ class Form extends Component {
 
         handleChange = e => {
         const {name, value} = e.currentTarget
-        this.setState ({[name]: value})
+          this.setState({ [name]: value })
+          
     };
   
         handleSubmit = e => {
         e.preventDefault();
-            console.log(this.state);
+          this.props.onSubmit(this.state);
+          this.reset();
     };
 
     reset = () => {
         this.setState({ name: '', number: '' });
     };
+  
     render() {
         return (
             <form onSubmit = {this.handleSubmit} >

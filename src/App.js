@@ -10,7 +10,9 @@ class App extends Component {
   filter: '', 
   }
 
- 
+  formOnSubmitHandler = data => {
+    console.log(data);
+ }
 
   render() {
     return (
@@ -18,7 +20,8 @@ class App extends Component {
       <div>
         <div className={css.App}>          
           <h1>Phonebook</h1>
-          <ContactForm onSubmit={this.handleChange} />
+          
+          <ContactForm onSubmit={this.formOnSubmitHandler} />
           </div>
         <div className={css.contactBox}>
           <h2>Contacts</h2>
