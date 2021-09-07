@@ -24,11 +24,15 @@ class App extends Component {
   render() {
     return (
      
-        <div className={css.App}>
+      <div>
+        <div className={css.App}>          
           <h1>Phonebook</h1>
-        <Form onSubmit={this.addContact} />
+          <Form onSubmit={this.addContact} />
+          </div>
+        <div className={css.contactBox}>
           <h2>Contacts</h2>
-        <Filter/>
+          <Filter />
+          </div>
         </div>
                      
     );
