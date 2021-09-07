@@ -14,7 +14,6 @@ const Filter = ({ value, onChange }) => (
     />
   </label>
 );
-
 export default Filter;
 
 Filter.propTypes = {
