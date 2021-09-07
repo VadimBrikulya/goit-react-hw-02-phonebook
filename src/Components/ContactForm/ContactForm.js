@@ -20,13 +20,15 @@ class Form extends Component {
         e.preventDefault();
           this.props.onSubmit(this.state);
           this.reset();
+          
     };
 
     reset = () => {
         this.setState({ name: '', number: '' });
     };
   
-    render() {
+  render() {
+    // const { name, number } = this.state
         return (
             <form onSubmit = {this.handleSubmit} >
                 <label htmlFor={this.nameInputId} >            
