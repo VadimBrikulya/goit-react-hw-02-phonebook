@@ -1,8 +1,8 @@
-import Filter from 'Components/Filter/Filter';
+import Filter from "Components/Filter/Filter";
 import React, { Component } from 'react';
 import css from "./App.module.css";
-import shortid from 'shortid';
-import Form from './Components/Forms/Form';
+// import shortid from 'shortid';
+import ContactForm from "Components/ContactForm/ContactForm"
 
 class App extends Component {
   state = {
@@ -10,16 +10,7 @@ class App extends Component {
   filter: '', 
   }
 
-  addContact = text => {
-    const todo = {
-      id: shortid.generate(),
-      text,
-      completed: false,
-    };
-    this.setState(({ todos }) => ({
-      todos: [todo, ...todos],
-    }));
-  }
+ 
 
   render() {
     return (
@@ -27,7 +18,7 @@ class App extends Component {
       <div>
         <div className={css.App}>          
           <h1>Phonebook</h1>
-          <Form onSubmit={this.addContact} />
+          <ContactForm onSubmit={this.handleChange} />
           </div>
         <div className={css.contactBox}>
           <h2>Contacts</h2>
